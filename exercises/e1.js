@@ -4,12 +4,7 @@ import { data } from "../data/data";
 // Return an array of all Planets' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetNames(data) {
-  let planetNames = data.planets.map((planet) => planet.name)
-  return planetNames;
-}
-
-
+export const getPlanetNames = (data) => data.planets.map((planet) => planet.name)
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
