@@ -9,12 +9,23 @@
  */
 
 export function minBy(array, cb) {
-  // Your code goes here...
-
+  let minIndex = 0
+  for(let i = 1; i < array.length; i++) {
+    if(cb(array[i]) < cb(array[minIndex])) {
+      minIndex = i
+    }
+  }
+  return array[minIndex];
 }
 
 export function maxBy(array, cb) {
-  // Your code goes here...
+  let maxIndex = 0
+  for(let i = 1; i < array.length; i++) {
+    if(cb(array[i]) > cb(array[maxIndex])) {
+      maxIndex = i
+    }
+  }
+  return array[maxIndex];
 
 }
 
