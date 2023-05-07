@@ -8,12 +8,13 @@
  * The function MUST NOT use the find() method.
  */
 
-
 export function find(array, callback) {
-  // Your code goes here...
-  
+  for (let element of array) {
+    if (callback(element)) {
+      return element;
+    }
+  }
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"
