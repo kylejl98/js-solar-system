@@ -5,8 +5,23 @@
  */
 
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let mostFrequent = 1;
+  let frequentYear;
+  
+  data.asteroids.map((i_asteroid) => {
+    let currentYear = 0;
+    data.asteroids.map((j_asteroid) => {
+      if(i_asteroid.discoveryYear == j_asteroid.discoveryYear) {
+        currentYear++;
+      }
+      
+      if(currentYear > mostFrequent) {
+        mostFrequent = currentYear;
+        frequentYear = i_asteroid.discoveryYear;
+      }
+    })
+  })
+  return frequentYear
 }
 
 // === TEST YOURSELF ===
